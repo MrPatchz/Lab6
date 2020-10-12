@@ -1,0 +1,33 @@
+﻿<Window x:Class="Project1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.498,0.396">
+        <TextBox x:Name="x" HorizontalAlignment="Left" Height="23" Margin="152,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="y" HorizontalAlignment="Left" Height="23" Margin="439,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="_operator" HorizontalAlignment="Left" Height="28" Margin="300,120,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="ListBox_SelectionChanged">
+            <ListBoxItem Content="+" Height="20" RenderTransformOrigin="0.5,0.5" Width="71">
+                <ListBoxItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ListBoxItem.RenderTransform>
+            </ListBoxItem>
+            <ListBoxItem Content="-"/>
+            <ListBoxItem Content="*"/>
+            <ListBoxItem Content="/"/>
+            <ListBoxItem Content="%"/>
+        </ListBox>
+        <Button x:Name="calculate" Content="Calculate" HorizontalAlignment="Left" Margin="266,265,0,0" VerticalAlignment="Top" Width="180" Height="49" Click="calculate_Click"/>
+        <TextBox x:Name="equalsBox" HorizontalAlignment="Left" Height="23" Margin="620,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136"/>
+        <Label Content="=" HorizontalAlignment="Left" Margin="577,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.608,-2.147"/>
+
+    </Grid>
+</Window>
